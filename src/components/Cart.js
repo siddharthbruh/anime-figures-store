@@ -50,19 +50,6 @@ function Cart({ items, onClose, onRemove, onUpdateQuantity, totalPrice, isOpen, 
         }
     };
 
-    const handleCheckout = () => {
-        toast.success('Checkout feature coming soon!', {
-            icon: '🚀',
-            style: {
-                borderRadius: '12px',
-                background: 'var(--surface-primary)',
-                color: 'var(--gray-900)',
-                border: '1px solid var(--gray-200)',
-                boxShadow: 'var(--shadow-lg)'
-            }
-        });
-    };
-
     const handleRemove = (itemId, itemName) => {
         onRemove(itemId);
         toast.success(`Removed ${itemName} from cart`, {

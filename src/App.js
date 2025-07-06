@@ -24,7 +24,6 @@ function AppContent() {
   const [categories, setCategories] = useState([]);
   const [animeShows, setAnimeShows] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [currentView, setCurrentView] = useState('home'); // 'home', 'product', 'login', 'signup', 'profile', 'checkout'
   const [favorites, setFavorites] = useState([]);
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);

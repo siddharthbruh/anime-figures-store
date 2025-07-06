@@ -6,7 +6,7 @@ import { apiService } from '../services/api';
 import toast from 'react-hot-toast';
 
 function Checkout({ cartItems, totalPrice, onClose, onOrderComplete }) {
-  const { user, isAuthenticated } = useAuth();
+  const { user } = useAuth();
   const [currentStep, setCurrentStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   
@@ -39,7 +39,7 @@ function Checkout({ cartItems, totalPrice, onClose, onOrderComplete }) {
     }
   });
 
-  const [orderSummary, setOrderSummary] = useState({
+  const [orderSummary] = useState({
     subtotal: totalPrice,
     shipping: totalPrice > 75 ? 0 : 9.99,
     tax: totalPrice * 0.08,
@@ -61,7 +61,7 @@ function Checkout({ cartItems, totalPrice, onClose, onOrderComplete }) {
   };
 
   const handlePaymentChange = useCallback((e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, checked } = e.target;
     
     if (name === 'sameAsShipping') {
       setPaymentInfo(prev => ({

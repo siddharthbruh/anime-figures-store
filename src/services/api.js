@@ -12,10 +12,7 @@ const api = axios.create({
 });
 
 // Auth token management
-let authToken = null;
-
 const setAuthToken = (token) => {
-  authToken = token;
   if (token) {
     api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   } else {
@@ -24,7 +21,6 @@ const setAuthToken = (token) => {
 };
 
 const clearAuthToken = () => {
-  authToken = null;
   delete api.defaults.headers.common['Authorization'];
 };
 
