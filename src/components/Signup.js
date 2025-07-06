@@ -55,7 +55,7 @@ function Signup({ onClose, onSwitchToLogin }) {
       newErrors.confirmPassword = 'Passwords do not match';
     }
 
-    if (formData.phone && !/^\+?[\d\s\-\(\)]+$/.test(formData.phone)) {
+    if (formData.phone && !/^\+?[\d\s\-()]+$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
     }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, Phone, MapPin, Lock, Edit, Save, X, Package, Heart, Settings } from 'lucide-react';
+import { User, Edit, Save, X, Package, Heart, Settings } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 function Profile({ onClose }) {
